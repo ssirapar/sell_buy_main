@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reselling Website</title>
+    <h1> Gitam Book Store</h1>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        #form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="auth-buttons" class="mb-3">
+        <button id="login-btn" class="btn btn-primary">Login</button>
+        <button id="signup-btn" class="btn btn-primary">Sign up</button>
+    </div>
+    <div id="form-container">
+        <form id="login-form" style="display: none;">
+            <h2 class="mb-3">Login</h2>
+            <div class="form-group">
+                <label for="login-email">Email:</label>
+                <input type="email" class="form-control" id="login-email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password:</label>
+                <input type="password" class="form-control" id="login-password" name="password" required>
+            </div>
+            <div class="form-group">
+                <a href="#" id="forgot-password-btn">Forgot password?</a>
+            </div>
+            <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="keep-logged-in" name="keep-logged-in">
+                <label class="form-check-label" for="keep-logged-in">Keep me logged in</label>
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="window.location.href='index.html'">Login</button>
+        </form>
+        <form id="signup-form" style="display: none;">
+            <h2 class="mb-3">Sign up</h2>
+            <div class="form-group">
+                <label for="signup-name">Name:</label>
+                <input type="text" class="form-control" id="signup-name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-email">Email:</label>
+                <input type="email" class="form-control" id="signup-email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-password">Password:</label>
+                <input type="password" class="form-control" id="signup-password" name="password" required>
+            </div>
+            <div id="password-requirements" class="mb-3">
+                <h4>Password Requirements:</h4>
+                <ul>
+                    <li>Minimum 8 characters</li>
+                    <li>At least one uppercase letter</li>
+                    <li>At least one lowercase letter</li>
+                    <li>At least one number</li>
+                    <li>Special characters allowed</li>
+                </ul>
+            </div>
+            <button type="submit" class="btn btn-primary" onclick="window.location.href='index.html'">Sign up</button>
+        </form>
+    </div>
+    <script>
+        // Function to display forms
+        function showForm(form) {
+            // Hide all forms
+            document.querySelectorAll('form').forEach(f => {
+                f.style.display = 'none';
+            });
+            // Display the selected form
+            form.style.display = 'block';
+        }
+
+        // Event listeners for authentication buttons
+        document.getElementById('login-btn').addEventListener('click', () => {
+            showForm(document.getElementById('login-form'));
+        });
+
+        document.getElementById('signup-btn').addEventListener('click', () => {
+            showForm(document.getElementById('signup-form'));
+        });
+
+        // Event listener for login form submission
+        document.getElementById('login-form').addEventListener('submit', e => {
+            e.preventDefault();
+            // Simulate login logic
+            const isLoggedIn = true; // Replace with actual login logic
+            if (isLoggedIn) {
+                alert('Logged in successfully!');
+                // You can customize this message with a popup/modal
+            } else {
+                alert('Login failed. Please check your credentials.');
+            }
+        });
+
+        // Event listener for "Forgot password" link click
+        document.getElementById('forgot-password-btn').addEventListener('click', () => {
+            showForm(document.getElementById('forgot-password-form'));
+        });
+
+        // Event listener for signup form submission
+        document.getElementById('signup-form').addEventListener('submit', e => {
+            e.preventDefault();
+
+            // Get password input
+            const password = document.getElementById('signup-password').value;
+
+            // Validate password requirements
+            const hasUpperCase = /[A-Z]/.test(password);
+            const hasLowerCase = /[a-z]/.test(password);
+            const hasNumber = /[0-9]/.test(password);
+            const hasSpecialChar = /[!@#$%^&*()]/.test(password);
+            const isLengthValid = password.length >= 8;
+
+            if (!isLengthValid || !hasUpperCase || !hasLowerCase || !hasNumber || !hasSpecialChar) {
+                alert('Password must meet the following requirements:\n' +
+                      '- Minimum 8 characters\n' +
+                      '- At least one uppercase letter\n' +
+                      '- At least one lowercase letter\n' +
+                      '- At least one number\n' +
+                      '- Special characters allowed: !@#$%^&*()');
+                return;
+            }
+
+            // Simulate signup logic (replace with actual signup logic)
+            const isSignedUp = true; // Replace with actual signup logic
+            if (isSignedUp) {
+                alert('Signed up successfully!');
+                // You can customize this message with a popup/modal
+            } else {
+                alert('Signup failed. Please try again later.');
+            }
+        });
+
+        // Event listener for forgot password form submission
+        document.getElementById('forgot-password-form').addEventListener('submit', e => {
+            e.preventDefault();
+            const email = document.getElementById('forgot-password-email').value;
+            // Simulate sending reset link to email
+            alert(`Password reset link has been sent to ${email}`);
+        });
+    </script>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>About Gitam Book Store</h5>
+                    <p>Gitam Book Store is a platform to buy and sell second-hand books at affordable prices. We cater to college, school, and general reading needs.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Useful Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="index.html">Home</a></li>
+                        <li><a class="text-white" href="sell-books.html">Sell a Book</a></li>
+                        <li><a class="text-white" href="buy-books.html">Buy a Book</a></li>
+                        <li><a class="text-white" href="Account.html">My Account</a></li>
+                        <li><a class="text-white" href="cart.html">Cart</a></li>
+                        
+                        <li><a class="text-white" href="aboutus.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: support@gitambookstore.com</li>
+                        <li>Phone: +91-1234567890</li>
+                        <li>Address: 123 Book St, Book City, India</li>
+                    </ul>
+                    <h5>Follow Us on instagram @gitamstore</h5>
+                    <ul class="list-unstyled d-flex">
+                        <li><a class="text-white mr-3" href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a class="text-white mr-3" href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a class="text-white mr-3" href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mt-4">
+                    <p>&copy; 2024, Gitam Book Store™ All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

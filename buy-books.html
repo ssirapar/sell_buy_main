@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Used Books</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <script src="buy-books.js" defer></script>
+<script src="cart.js" defer></script>
+
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-4 mb-4">
+        <h1 class="mb-0">Buy Books</h1>
+        <nav class="mt-3">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#" data-filter="all-books">All Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#" data-filter="1st-year-books">1st Year Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#" data-filter="2nd-year-books">2nd Year Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#" data-filter="3rd-year-books">3rd Year Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#" data-filter="4th-year-books">4th Year Books</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section id="1st-year-books" class="book-category" data-category="1st-year-books">
+            <h2 class="text-primary border-bottom pb-2 mb-4">1st Year Books</h2>
+            <div class="row">
+                <div class="col-md-3 book-item mb-4" data-category="1st-year-books">
+                    <div class="card">
+                        <img src="dsa.jpg" class="card-img-top" alt="1st Year Book 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">DSA in C++</h5>
+                            <p class="card-text">Rs 980.00</p>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                                <button class="btn btn-sm btn-primary" onclick="window.location.href='payment.html'">Buy Now</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 book-item mb-4" data-category="4th-year-books">
+                    <div class="card">
+                        <img src="dbs.jpg" class="card-img-top" alt="4th Year Book 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"> Data Base Systems</h5>
+                            <p class="card-text">Rs 2500.00</p>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                                <button class="btn btn-sm btn-primary" onclick="window.location.href='payment.html'">Buy Now</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 book-item mb-4" data-category="1st-year-books">
+                    <div class="card">
+                        <img src="cloudcomputing.jpg" class="card-img-top" alt="1st Year Book 2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Cloud Computing</h5>
+                            <p class="card-text">Rs 1200.00</p>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                                <button class="btn btn-sm btn-primary" onclick="window.location.href='payment.html'">Buy Now</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="2nd-year-books" class="book-category" data-category="2nd-year-books">
+            <h2 class="text-primary border-bottom pb-2 mb-4">2nd Year Books</h2>
+            <div class="row">
+                <div class="col-md-3 book-item mb-4" data-category="2nd-year-books">
+                    <div class="card">
+                        <img src="ai.jpg" class="card-img-top" alt="2nd Year Book 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Artificial Intelligence</h5>
+                            <p class="card-text">Rs 1500.00</p>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                                <button class="btn btn-sm btn-primary" onclick="window.location.href='payment.html'">Buy Now</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 book-item mb-4" data-category="4th-year-books">
+                    <div class="card">
+                        <img src="webdev.jpg" class="card-img-top" alt="4th Year Book 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"> Front end Web Dev</h5>
+                            <p class="card-text">Rs 1900.00</p>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                                <button class="btn btn-sm btn-primary" onclick="window.location.href='payment.html'">Buy Now</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 book-item mb-4" data-category="2nd-year-books">
+                    <div class="card">
+                        <img src="crypto.jpg" class="card-img-top" alt="2nd Year Book 2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Cryptography</h5>
+                            <p class="card-text">Rs 1800.00</p>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                                <button class="btn btn-sm btn-primary" onclick="window.location.href='payment.html'">Buy Now</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="3rd-year-books" class="book-category" data-category="3rd-year-books">
+            <h2 class="text-primary border-bottom pb-2 mb-4">3rd Year Books</h2>
+            <div class="row">
+                <div class="col-md-3 book-item mb-4" data-category="3rd-year-books">
+                    <div class="card">
+                        <img src="datamining.jpg" class="card-img-top" alt="3rd Year Book 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Data Mining</h5>
+                            <p class="card-text">Rs 2000.00</p>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                                <button class="btn btn-sm btn-primary" onclick="window.location.href='payment.html'">Buy Now</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 book-item mb-4" data-category="4th-year-books">
+                    <div class="card">
+                        <img src="datacompression.jpg" class="card-img-top" alt="4th Year Book 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"> Data Compression</h5>
+                            <p class="card-text">Rs 2100.00</p>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                                <button class="btn btn-sm btn-primary" onclick="window.location.href='payment.html'">Buy Now</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 book-item mb-4" data-category="3rd-year-books">
+                    <div class="card">
+                        <img src="cd.jpg" class="card-img-top" alt="3rd Year Book 2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Compiler Design</h5>
+                            <p class="card-text">Rs 2000.00</p>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                                <button class="btn btn-sm btn-primary" onclick="window.location.href='payment.html'">Buy Now</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="4th-year-books" class="book-category" data-category="4th-year-books">
+            <h2 class="text-primary border-bottom pb-2 mb-4">4th Year Books</h2>
+            <div class="row">
+                <div class="col-md-3 book-item mb-4" data-category="4th-year-books">
+                    <div class="card">
+                        <img src="dl.jpg" class="card-img-top" alt="4th Year Book 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"> Deep Learning</h5>
+                            <p class="card-text">Rs 2500.00</p>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                                <button class="btn btn-sm btn-primary" onclick="window.location.href='payment.html'">Buy Now</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 book-item mb-4" data-category="4th-year-books">
+                    <div class="card">
+                        <img src="full stack.jpg" class="card-img-top" alt="4th Year Book 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"> Full Stack </h5>
+                            <p class="card-text">Rs 2800.00</p>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                                <button class="btn btn-sm btn-primary" onclick="window.location.href='payment.html'">Buy Now</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-3 book-item mb-4" data-category="4th-year-books">
+                    <div class="card">
+                        <img src="nlp.jpg" class="card-img-top" alt="4th Year Book 2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Natural Language Processing</h5>
+                            <p class="card-text">Rs 2800.00</p>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                                <button class="btn btn-sm btn-primary" onclick="window.location.href='payment.html'">Buy Now</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p class="mb-0">&copy; 2024 Used Book Store</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterLinks = document.querySelectorAll('nav ul li a');
+            const bookCategories = document.querySelectorAll('.book-category');
+
+            filterLinks.forEach(link => {
+                link.addEventListener('click', event => {
+                    event.preventDefault();
+                    const filter = link.getAttribute('data-filter');
+
+                    bookCategories.forEach(category => {
+                        if (filter === 'all-books' || category.getAttribute('data-category') === filter) {
+                            category.style.display = 'block';
+                        } else {
+                            category.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>About Gitam Book Store</h5>
+                    <p>Gitam Book Store is a platform to buy and sell second-hand books at affordable prices. We cater to college, school, and general reading needs.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Useful Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="index.html">Home</a></li>
+                        <li><a class="text-white" href="sell-books.html">Sell a Book</a></li>
+                        <li><a class="text-white" href="buy-books.html">Buy a Book</a></li>
+                        <li><a class="text-white" href="Account.html">My Account</a></li>
+                        <li><a class="text-white" href="cart.html">Cart</a></li>
+                        
+                        <li><a class="text-white" href="aboutus.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: support@gitambookstore.com</li>
+                        <li>Phone: +91-1234567890</li>
+                        <li>Address: 123 Book St, Book City, India</li>
+                    </ul>
+                    <h5>Follow Us on instagram @gitamstore</h5>
+                    <ul class="list-unstyled d-flex">
+                        <li><a class="text-white mr-3" href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a class="text-white mr-3" href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a class="text-white mr-3" href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mt-4">
+                    <p>&copy; 2024, Gitam Book Store™ All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

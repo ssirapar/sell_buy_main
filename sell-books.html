@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gitam Book Store - Sell or Buy Books</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-success text-white text-center py-3 position-sticky top-0">
+        <h1>Gitam Book Store</h1>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#sell">Sell a Book</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="buy-books.html">Buy a Book</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="Account.html">My Account</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="py-4 bg-light text-center">
+        <div class="container">
+            <h2>Welcome to Our Store</h2>
+            <p>Submit a free classified ad to sell your used books. <a href="aboutus.html">Click here to learn how it works</a>.</p>
+        </div>
+    </section>
+
+    <section id="sell" class="py-4">
+        <div class="container">
+            <h2 class="text-center mb-4">Sell a Book</h2>
+            <form id="sellForm" class="mx-auto">
+                <h3>Book Details:</h3>
+                <div class="form-group">
+                    <label for="adTitle">Ad Title:</label>
+                    <input type="text" class="form-control" id="adTitle" name="adTitle" placeholder="Enter your ad title" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookDetails">Book Details:</label>
+                    <textarea class="form-control" id="bookDetails" name="bookDetails" placeholder="Enter book details manually" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="isbn">ISBN:</label>
+                    <input type="text" class="form-control" id="isbn" name="isbn" placeholder="Enter 13 digit ISBN number">
+                </div>
+                <div class="form-group">
+                    <label for="bookType">Book Type:</label>
+                    <select class="form-control" id="bookType" name="bookType">
+                        <option value="excellent">Excellent</option>
+                        <option value="good">Good</option>
+                        <option value="fair">Fair</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="photos">Upload Photos:</label>
+                    <input type="file" class="form-control-file" id="photos" name="photos" multiple>
+                    <small class="form-text text-muted">Ads with multiple images get higher responses!</small>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity Available (Stock):</label>
+                    <input type="number" class="form-control" id="quantity" name="quantity" min="1" value="1" required>
+                </div>
+
+                <h3>Pricing Details:</h3>
+                <div class="form-group">
+                    <label for="price">Your Price (₹):</label>
+                    <input type="text" class="form-control" id="price" name="price" placeholder="Enter your ad price" required>
+                </div>
+                
+
+                <h3>Preferred Payment Mode:</h3>
+                <p>After your book is sold, in what mode would you like to receive the payment?</p>
+                <div class="form-group">
+                    <label for="upiNumber">UPI Number:</label>
+                    <input type="text" class="form-control" id="upiNumber" name="upiNumber">
+                </div>
+                <div class="form-group">
+                    <label for="bankAccount">Bank Account:</label>
+                    <input type="text" class="form-control" id="bankAccount" name="bankAccount">
+                </div>
+
+                <h3>Your Details:</h3>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number (WhatsApp only):</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="+91" required>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="privatePhone" name="privatePhone">
+                    <label class="form-check-label" for="privatePhone">Keep my phone number private.</label>
+                </div>
+                <div class="form-group">
+                    <label for="pincode">Pincode:</label>
+                    <input type="text" class="form-control" id="pincode" name="pincode" required>
+                </div>
+
+                <div class="form-group">
+                    <p>By clicking "Done", you agree to our <a href="#terms">Terms of Use</a>, <a href="#policy">Listing Policy</a>, and <a href="#privacy">Privacy Policy</a>.</p>
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm">Done</button>
+                
+            </form>
+        </div>
+    </section>
+
+    
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>About Gitam Book Store</h5>
+                    <p>Gitam Book Store is a platform to buy and sell second-hand books at affordable prices. We cater to college, school, and general reading needs.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Useful Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="index.html">Home</a></li>
+                        <li><a class="text-white" href="sell-books.html">Sell a Book</a></li>
+                        <li><a class="text-white" href="buy-books.html">Buy a Book</a></li>
+                        <li><a class="text-white" href="Account.html">My Account</a></li>
+                        <li><a class="text-white" href="cart.html">Cart</a></li>
+                        
+                        <li><a class="text-white" href="aboutus.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: support@gitambookstore.com</li>
+                        <li>Phone: +91-1234567890</li>
+                        <li>Address: 123 Book St, Book City, India</li>
+                    </ul>
+                    <h5>Follow Us on instagram @gitamstore</h5>
+                    <ul class="list-unstyled d-flex">
+                        <li><a class="text-white mr-3" href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a class="text-white mr-3" href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a class="text-white mr-3" href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mt-4">
+                    <p>&copy; 2024, Gitam Book Store™ All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Add FontAwesome for social media icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="sellbook.js"></script>
+</body>
+</html>
